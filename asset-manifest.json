@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/stepsis-ai/static/css/main.0b5d0674.css",
-    "main.js": "/stepsis-ai/static/js/main.e4948a91.js",
+    "main.css": "/stepsis-ai/static/css/main.2ad5543d.css",
+    "main.js": "/stepsis-ai/static/js/main.4e1a858a.js",
     "static/media/about2.png": "/stepsis-ai/static/media/about2.627f811fc72b073813f0.png",
+    "static/media/buy-stepsis.png": "/stepsis-ai/static/media/buy-stepsis.0beda36be3d8cfb5aa7f.png",
     "static/media/about1.png": "/stepsis-ai/static/media/about1.bd4e73151b2756654485.png",
+    "static/media/about3.png": "/stepsis-ai/static/media/about3.30f467b1a38dbbd19c13.png",
+    "static/media/bg-help.png": "/stepsis-ai/static/media/bg-help.1db9b04e0eb1b54b39f4.png",
     "static/media/hero-stepsis.png": "/stepsis-ai/static/media/hero-stepsis.dcaad80f6fe80febe0b8.png",
-    "static/media/buy-stepsis.png": "/stepsis-ai/static/media/buy-stepsis.748c42eaec99b88487a1.png",
     "static/media/phase3.png": "/stepsis-ai/static/media/phase3.a680d84263c11c5a8051.png",
     "static/media/phase2.png": "/stepsis-ai/static/media/phase2.708bf335d64cfb387377.png",
     "static/media/phase4.png": "/stepsis-ai/static/media/phase4.e596c965431855078147.png",
@@ -21,11 +23,11 @@
     "static/media/ticker4.png": "/stepsis-ai/static/media/ticker4.2a7d4061b3c035f3ec2d.png",
     "static/media/ticker3.png": "/stepsis-ai/static/media/ticker3.6272c6c56f4252363ae4.png",
     "index.html": "/stepsis-ai/index.html",
-    "main.0b5d0674.css.map": "/stepsis-ai/static/css/main.0b5d0674.css.map",
-    "main.e4948a91.js.map": "/stepsis-ai/static/js/main.e4948a91.js.map"
+    "main.2ad5543d.css.map": "/stepsis-ai/static/css/main.2ad5543d.css.map",
+    "main.4e1a858a.js.map": "/stepsis-ai/static/js/main.4e1a858a.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b5d0674.css",
-    "static/js/main.e4948a91.js"
+    "static/css/main.2ad5543d.css",
+    "static/js/main.4e1a858a.js"
   ]
 }
