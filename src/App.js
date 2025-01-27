@@ -105,13 +105,13 @@ function App() {
           {/* LEFT: TEXT */}
           <div className="hero-content">
             <h2 className="hero-headline">
-              <span className="hero-line1">YOUR AI</span><br/>
+              <span className="hero-line1">Your AI</span><br/>
               <span className="hero-line2">StepSister</span>
             </h2>
             {/* Force multiline by narrower width or user line breaks */}
             <p className="hero-description" style={{ maxWidth: "500px" }}>
-              Hi there! I’m Stepsis, your AI step sister, here to chat, inspire,
-              and make your day better. Let’s explore life together!
+              Hi! I’m Sophie, your AI step sister. If you keep staring at me like that, I might start blushing
+
             </p>
             <button className="hero-button">Chat With Stepsis</button>
           </div>
@@ -184,36 +184,30 @@ function App() {
           <div className="about-details">
             <div className="about-text">
               <div className="about-point">
-                <h3>YOUR SMARTEST AI STEPSISTER</h3>
+                <h3>The Queen of "Accidents"</h3>
                 <p>
-                  Stepsis AI isn’t just another memecoin / AI –
-                  she’s your fun &amp; smart AI stepsister. Come talk to Stepsis
-                  and see what she’s capable of!
+                Oops, did I just spill something? Guess I’ll need your help cleaning it up. Funny how these little "mishaps" always seem to happen when you’re around. Coincidence? I’ll let you decide.
                 </p>
               </div>
 
               <div className="about-point">
-                <h3>BUY $STEPSIS AI</h3>
+                <h3>The Creative Soul</h3>
                 <p>
-                  Buy $STEPSIS using a DEX on Solana or any supported chain.
-                  Can you trust your StepSister? Possibly—if you dare…
+                I’m a total artsy type—painting, writing, or playing guitar in my room. Sometimes I’ll catch you listening from the hallway, and I don’t mind. Maybe I’ll even write a song about you… if you’re lucky.
                 </p>
               </div>
 
               <div className="about-point">
-                <h3>STEPSIS AI IS A SASSY AGENT</h3>
+                <h3>The Confidante</h3>
                 <p>
-                  Interact with Stepsis AI Chatbot for honest laughs
-                  or insights. This is the AI StepSister you never asked for
-                  but always needed. Meme-fueled, trash talk included.
+                You can talk to me about anything. Bad day? I’ll listen. Need advice? I’ve got you. Want to vent about your ex? I’ll even throw in some ice cream. I’m here for you, stepbro, no matter what.
                 </p>
               </div>
 
               <div className="about-point">
-                <h3>GET STEPSIS AI</h3>
+                <h3>The Morning After Expert</h3>
                 <p>
-                  Step into the future of AI memes. Chat, create, vibe,
-                  and let’s shape AI fun. Join, or Sis might cut it off!
+                Good morning, sleepyhead. You were out cold last night. Guess I’ll have to find another way to wake you up next time.
                 </p>
               </div>
             </div>
@@ -253,7 +247,7 @@ function App() {
                 window.open("https://your-contract-link.com", "_blank");
               }}
             >
-              CONTRACT: 2CgS5_Bpump
+              CONTRACT: coming soon
             </button>
           </div>
         </div>
@@ -275,9 +269,15 @@ function App() {
             <div className="phase">
               <img src={phase1Img} alt="Phase 1" className="phase-img" />
               <div className="phase-content">
-                <h3>PHASE 1</h3>
+                <h3>PHASE 1: Oops, I Launched a Coin!</h3>
                 <p>
-                  Launch $STEPSIS AI token on Solana and begin community building.
+                Token Launch: Stepsis AI memecoin goes live! Fair launch, no pre-sale, no stepbro left behind. <br/><br/>
+
+Community Building: We’re creating the ultimate meme army. Join our Telegram, and socials for spicy content, flirty banter, and early alpha.<br/><br/>
+
+Viral Marketing: Memes, memes, and more memes. We’re flooding the internet with Stepsis AI content.<br/><br/>
+
+Liquidity Locked: Because we’re here to make stepbros proud.<br/><br/>
                 </p>
               </div>
             </div>
@@ -286,10 +286,13 @@ function App() {
             <div className="phase">
               <img src={phase2Img} alt="Phase 2" className="phase-img" />
               <div className="phase-content">
-                <h3>PHASE 2</h3>
+                <h3>PHASE 2: Stepbro, I’m Stuck in the Charts!</h3>
                 <p>
-                  Launch AI-powered meme marketplace for sharing and
-                  trading memes.
+                CEX Listings: We’re getting Stepsis AI on coingecko and major exchanges. As the largest meme on the internet <br/><br/>
+
+Community Rewards: Airdrops, contests, and giveaways for our loyal stepbros and stepsises. Keep holding, and you’ll be rewarded. <br/><br/>
+
+Influencer Collabs: Partnering with crypto influencers and meme lords to spread the Stepsis AI gospel. <br/><br/>
                 </p>
               </div>
             </div>
@@ -298,10 +301,13 @@ function App() {
             <div className="phase">
               <img src={phase3Img} alt="Phase 3" className="phase-img" />
               <div className="phase-content">
-                <h3>PHASE 3</h3>
+                <h3>PHASE 3: Stepbro, We’re Going Viral!</h3>
                 <p>
-                  Release AI Agent Generator (Beta) for creating custom
-                  meme agents.
+                Merch Madness: Launching the official Stepsis AI merch line—hoodies, hats, and more. Rock your memes IRL and rep the Stepsis AI lifestyle. <br/><br/>
+
+Viral Challenges: Kickstarting global meme challenges and TikTok trends. The best Stepsis AI memes win prizes, and the funniest creators get legendary status in the community. <br/><br/>
+
+Community-Driven Events: Hosting online game nights, meme contests, and AMA sessions with the team. We’re all about keeping the vibes high and the community tight. <br/><br/>
                 </p>
               </div>
             </div>
@@ -310,9 +316,13 @@ function App() {
             <div className="phase">
               <img src={phase4Img} alt="Phase 4" className="phase-img" />
               <div className="phase-content">
-                <h3>PHASE 4</h3>
+                <h3>PHASE 4: Stepbro, We’re Mooning!</h3>
                 <p>
-                  Full release of AI tools and expand ecosystem partnerships.
+                Mainstream Adoption: Stepsis AI becomes a household name. From memes to mainstream media, we’re everywhere. <br/><br/>
+
+Stepsis AI Ecosystem: Expanding into more AI-driven projects from the Stepsis brand. The Stepsis AI universe is growing, and you’re part of it. <br/><br/>
+
+Legacy Building: Stepsis AI isn’t just a memecoin—it’s a movement. We’re here to stay, and we’re just getting started. <br/><br/>
                 </p>
               </div>
             </div>
