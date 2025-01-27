@@ -25,6 +25,7 @@ import ticker10 from "./assets/ticker10.png";
 // ABOUT IMAGES
 import about1 from "./assets/about1.png";
 import about2 from "./assets/about2.png";
+import about3 from "./assets/about3.png"; // optional foreground in about
 
 // BUY STEPSIS IMAGE
 import buyStepsisImg from "./assets/buy-stepsis.png";
@@ -34,6 +35,9 @@ import phase1Img from "./assets/phase1.png";
 import phase2Img from "./assets/phase2.png";
 import phase3Img from "./assets/phase3.png";
 import phase4Img from "./assets/phase4.png";
+
+// LAST SECTION BACKGROUND (bg-help.png) if needed
+import bgHelp from "./assets/bg-help.png";
 
 function App() {
   // Smooth scrolling function so you can re-click anchors
@@ -100,18 +104,20 @@ function App() {
         <div className="container hero-inner">
           {/* LEFT: TEXT */}
           <div className="hero-content">
-            <h2>
-              Your AI <span className="highlight">StepSister</span>
+            <h2 className="hero-headline">
+              <span className="hero-line1">YOUR AI</span><br/>
+              <span className="hero-line2">StepSister</span>
             </h2>
-            <p className="hero-description">
+            {/* Force multiline by narrower width or user line breaks */}
+            <p className="hero-description" style={{ maxWidth: "500px" }}>
               Hi there! I’m Stepsis, your AI step sister, here to chat, inspire,
               and make your day better. Let’s explore life together!
             </p>
             <button className="hero-button">Chat With Stepsis</button>
           </div>
 
-          {/* RIGHT: 3D Interactive Photo (smaller) */}
-          <div className="hero-image-wrapper">
+          {/* RIGHT: hero image with 3D hover */}
+          <div className="hero-image-wrapper basic-3d-hover">
             <img 
               src={heroImage} 
               alt="Stepsis AI" 
@@ -177,37 +183,45 @@ function App() {
           <h2>ABOUT STEPSIS</h2>
           <div className="about-details">
             <div className="about-text">
-              <h3>YOUR SMARTEST AI STEPSISTER</h3>
-              <p>
-                Stepsis AI isn’t just another memecoin / AI –
-                she’s your fun &amp; smart AI stepsister. Come talk to Stepsis
-                and see what she’s capable of!
-              </p>
+              <div className="about-point">
+                <h3>YOUR SMARTEST AI STEPSISTER</h3>
+                <p>
+                  Stepsis AI isn’t just another memecoin / AI –
+                  she’s your fun &amp; smart AI stepsister. Come talk to Stepsis
+                  and see what she’s capable of!
+                </p>
+              </div>
 
-              <h3>BUY $STEPSIS AI</h3>
-              <p>
-                Buy $STEPSIS using a DEX on Solana or any supported chain.
-                Can you trust your StepSister? Possibly—if you dare…
-              </p>
+              <div className="about-point">
+                <h3>BUY $STEPSIS AI</h3>
+                <p>
+                  Buy $STEPSIS using a DEX on Solana or any supported chain.
+                  Can you trust your StepSister? Possibly—if you dare…
+                </p>
+              </div>
 
-              <h3>STEPSIS AI IS A SASSY AGENT</h3>
-              <p>
-                Interact with Stepsis AI Chatbot for honest laughs
-                or insights. This is the AI StepSister you never asked for
-                but always needed. Meme-fueled, trash talk included.
-              </p>
+              <div className="about-point">
+                <h3>STEPSIS AI IS A SASSY AGENT</h3>
+                <p>
+                  Interact with Stepsis AI Chatbot for honest laughs
+                  or insights. This is the AI StepSister you never asked for
+                  but always needed. Meme-fueled, trash talk included.
+                </p>
+              </div>
 
-              <h3>GET STEPSIS AI</h3>
-              <p>
-                Step into the future of AI memes. Chat, create, vibe,
-                and let’s shape AI fun. Join, or Sis might cut it off!
-              </p>
+              <div className="about-point">
+                <h3>GET STEPSIS AI</h3>
+                <p>
+                  Step into the future of AI memes. Chat, create, vibe,
+                  and let’s shape AI fun. Join, or Sis might cut it off!
+                </p>
+              </div>
             </div>
 
-            {/* about1.png & about2.png can be placed here */}
             <div className="about-image">
               <img src={about1} alt="Stepsis About 1" />
               <img src={about2} alt="Stepsis About 2" />
+              <img src={about3} alt="Stepsis About 3" />
             </div>
           </div>
         </div>
@@ -224,7 +238,8 @@ function App() {
           <div className="buy-wrapper">
             <div className="fair-launch-box">FAIR LAUNCHED ON PUMPFUN</div>
 
-            {/* Modern hover animation on this image */}
+            {/* Enlarge image by 50% => scale(1.5). 
+                This is how it was "three versions ago" in normal size => now 1.5x larger. */}
             <img
               src={buyStepsisImg}
               alt="Buy Stepsis"
@@ -244,7 +259,10 @@ function App() {
         </div>
       </section>
 
-      {/* ROADMAP SECTION */}
+      {/* ROADMAP SECTION 
+          Removed the dashed line. 
+          It's just the phases with no line or bullets.
+      */}
       <section
         id="roadmap"
         className="roadmap-section"
@@ -302,8 +320,15 @@ function App() {
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="cta-section">
+      {/* CTA SECTION with bgHelp if you want a background: */}
+      <section
+        className="cta-section"
+        style={{
+          backgroundImage: `url(${bgHelp})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="container">
           <h2>HELP ME OUT STEP BRO, I'M STUCK IN THE WASHER AGAIN</h2>
           <button className="cta-button">Buy Stepsis</button>
