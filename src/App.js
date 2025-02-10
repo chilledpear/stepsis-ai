@@ -125,7 +125,7 @@ function App() {
             {/* External link button for chatting */}
             <button
               className="hero-button"
-              onClick={() => openExternalLink("https://t.me/stepsissAi")}
+              onClick={() => openExternalLink("https://www.languagemodel.site/")}
             >
               Chat With Stepsis
             </button>
