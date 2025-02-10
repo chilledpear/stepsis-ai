@@ -7,7 +7,7 @@ import dexIcon from "./assets/dex.png";
 import telegramIcon from "./assets/telegram.png";
 import twitterIcon from "./assets/twitter.png";
 
-// HERO VIDEO (replaces old heroImage import)
+// HERO VIDEO (changed from PNG to MP4)
 import heroVideo from "./assets/hero-stepsis.mp4";
 
 // TICKER IMAGES
@@ -27,8 +27,8 @@ import about1 from "./assets/about1.png";
 import about2 from "./assets/about2.png";
 import about3 from "./assets/about3.png"; // optional foreground in about
 
-// BUY STEPSIS IMAGE
-import buyStepsisImg from "./assets/buy-stepsis.png";
+// BUY STEPSIS VIDEO (changed from PNG to MP4)
+import buyStepsisVideo from "./assets/buy-stepsis.mp4";
 
 // ROADMAP IMAGES
 import phase1Img from "./assets/phase1.png";
@@ -36,7 +36,7 @@ import phase2Img from "./assets/phase2.png";
 import phase3Img from "./assets/phase3.png";
 import phase4Img from "./assets/phase4.png";
 
-// LAST SECTION BACKGROUND
+// LAST SECTION BACKGROUND (bg-help.png) if needed
 import bgHelp from "./assets/bg-help.png";
 
 function App() {
@@ -62,26 +62,17 @@ function App() {
           {/* Center: LINKS */}
           <ul className="navbar-links">
             <li>
-              <a
-                href="#about"
-                onClick={(e) => handleSmoothScroll(e, "about")}
-              >
+              <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>
                 About
               </a>
             </li>
             <li>
-              <a
-                href="#buy-stepsis"
-                onClick={(e) => handleSmoothScroll(e, "buy-stepsis")}
-              >
+              <a href="#buy-stepsis" onClick={(e) => handleSmoothScroll(e, "buy-stepsis")}>
                 Buy Stepsis
               </a>
             </li>
             <li>
-              <a
-                href="#roadmap"
-                onClick={(e) => handleSmoothScroll(e, "roadmap")}
-              >
+              <a href="#roadmap" onClick={(e) => handleSmoothScroll(e, "roadmap")}>
                 Roadmap
               </a>
             </li>
@@ -113,25 +104,22 @@ function App() {
               <span className="hero-line2">StepSister</span>
             </h2>
             <p className="hero-description" style={{ maxWidth: "500px" }}>
-              Hi! I’m Sophie, your AI step sister. If you keep staring at me like
-              that, I might start blushing
+              Hi! I’m Sophie, your AI step sister. If you keep staring at me like that, I might start
+              blushing
             </p>
-            {/* Placeholder link to Google */}
-            <button
-              className="hero-button"
-              onClick={() => window.open("https://google.com", "_blank")}
-            >
-              Chat With Stepsis
-            </button>
+            <button className="hero-button">Chat With Stepsis</button>
           </div>
 
-          {/* RIGHT: hero VIDEO with 3D hover if you want */}
+          {/* RIGHT: HERO VIDEO with 3D hover */}
           <div className="hero-video-wrapper basic-3d-hover">
-            <video className="hero-video" autoPlay loop muted playsInline>
-              <source src={heroVideo} type="video/mp4" />
-              {/* fallback if mp4 not supported */}
-              Sorry, your browser doesn’t support embedded videos.
-            </video>
+            <video
+              src={heroVideo}
+              className="hero-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
           </div>
         </div>
       </header>
@@ -183,11 +171,7 @@ function App() {
       </div>
 
       {/* ABOUT STEPSIS SECTION */}
-      <section
-        id="about"
-        className="about-section"
-        style={{ scrollMarginTop: "100px" }}
-      >
+      <section id="about" className="about-section" style={{ scrollMarginTop: "100px" }}>
         <div className="about-content container">
           <h2>ABOUT STEPSIS</h2>
           <div className="about-details">
@@ -195,26 +179,34 @@ function App() {
               <div className="about-point">
                 <h3>The Queen of "Accidents"</h3>
                 <p>
-                  Oops, did I just spill something? Guess I’ll need your help
-                  cleaning it up. Funny how these little "mishaps"...
+                  Oops, did I just spill something? Guess I’ll need your help cleaning it up. Funny how
+                  these little "mishaps" always seem to happen when you’re around. Coincidence? I’ll let you
+                  decide.
                 </p>
               </div>
+
               <div className="about-point">
                 <h3>The Creative Soul</h3>
                 <p>
-                  I’m a total artsy type—painting, writing, or playing guitar...
+                  I’m a total artsy type—painting, writing, or playing guitar in my room. Sometimes I’ll catch
+                  you listening from the hallway, and I don’t mind. Maybe I’ll even write a song about you… if you’re
+                  lucky.
                 </p>
               </div>
+
               <div className="about-point">
                 <h3>The Confidante</h3>
                 <p>
-                  You can talk to me about anything. Bad day? I’ll listen...
+                  You can talk to me about anything. Bad day? I’ll listen. Need advice? I’ve got you. Want to vent
+                  about your ex? I’ll even throw in some ice cream. I’m here for you, stepbro, no matter what.
                 </p>
               </div>
+
               <div className="about-point">
                 <h3>The Morning After Expert</h3>
                 <p>
-                  Good morning, sleepyhead. You were out cold last night...
+                  Good morning, sleepyhead. You were out cold last night. Guess I’ll have to find another way to
+                  wake you up next time.
                 </p>
               </div>
             </div>
@@ -225,40 +217,32 @@ function App() {
               <img src={about3} alt="Stepsis About 3" />
             </div>
           </div>
-
-          {/* Example "Telegram" Button -> Google placeholder */}
-          <div style={{ marginTop: "2rem", textAlign: "center" }}>
-            <button
-              className="hero-button"
-              onClick={() => window.open("https://google.com", "_blank")}
-            >
-              Chat with me in Telegram
-            </button>
-          </div>
         </div>
       </section>
 
       {/* BUY STEPSIS SECTION */}
-      <section
-        id="buy-stepsis"
-        className="buy-stepsis-section"
-        style={{ scrollMarginTop: "100px" }}
-      >
+      <section id="buy-stepsis" className="buy-stepsis-section" style={{ scrollMarginTop: "100px" }}>
         <div className="container">
           <h2>BUY STEPSIS</h2>
           <div className="buy-wrapper">
             <div className="fair-launch-box">FAIR LAUNCHED ON PUMPFUN</div>
-            {/* Enlarged image (scale 1.5 in CSS) */}
-            <img
-              src={buyStepsisImg}
-              alt="Buy Stepsis"
-              className="buy-stepsis-img"
-            />
 
-            {/* Contract button -> Google placeholder */}
+            {/* BUY STEPSIS VIDEO instead of image */}
+            <video
+              src={buyStepsisVideo}
+              className="buy-stepsis-img"
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+
             <button
               className="contract-button"
-              onClick={() => window.open("https://google.com", "_blank")}
+              onClick={() => {
+                // Replace with your contract link
+                window.open("https://your-contract-link.com", "_blank");
+              }}
             >
               CONTRACT: coming soon
             </button>
@@ -267,50 +251,94 @@ function App() {
       </section>
 
       {/* ROADMAP SECTION */}
-      <section
-        id="roadmap"
-        className="roadmap-section"
-        style={{ scrollMarginTop: "100px" }}
-      >
+      <section id="roadmap" className="roadmap-section" style={{ scrollMarginTop: "100px" }}>
         <div className="container">
           <h2>ROADMAP</h2>
           <div className="roadmap-container">
+            {/* PHASE 1 */}
             <div className="phase">
               <img src={phase1Img} alt="Phase 1" className="phase-img" />
               <div className="phase-content">
                 <h3>PHASE 1: Oops, I Launched a Coin!</h3>
                 <p>
-                  Token Launch: Stepsis AI memecoin goes live! Fair launch...
+                  Token Launch: Stepsis AI memecoin goes live! Fair launch, no pre-sale, no stepbro left behind.
+                  <br />
+                  <br />
+                  Community Building: We’re creating the ultimate meme army. Join our Telegram, and socials for spicy
+                  content, flirty banter, and early alpha.
+                  <br />
+                  <br />
+                  Viral Marketing: Memes, memes, and more memes. We’re flooding the internet with Stepsis AI content.
+                  <br />
+                  <br />
+                  Liquidity Locked: Because we’re here to make stepbros proud.
+                  <br />
+                  <br />
                 </p>
               </div>
             </div>
 
+            {/* PHASE 2 */}
             <div className="phase">
               <img src={phase2Img} alt="Phase 2" className="phase-img" />
               <div className="phase-content">
                 <h3>PHASE 2: Stepbro, I’m Stuck in the Charts!</h3>
                 <p>
-                  CEX Listings: We’re getting Stepsis AI on coingecko...
+                  CEX Listings: We’re getting Stepsis AI on coingecko and major exchanges. As the largest meme on
+                  the internet
+                  <br />
+                  <br />
+                  Community Rewards: Airdrops, contests, and giveaways for our loyal stepbros and stepsises. Keep holding,
+                  and you’ll be rewarded.
+                  <br />
+                  <br />
+                  Influencer Collabs: Partnering with crypto influencers and meme lords to spread the Stepsis AI gospel.
+                  <br />
+                  <br />
                 </p>
               </div>
             </div>
 
+            {/* PHASE 3 */}
             <div className="phase">
               <img src={phase3Img} alt="Phase 3" className="phase-img" />
               <div className="phase-content">
                 <h3>PHASE 3: Stepbro, We’re Going Viral!</h3>
                 <p>
-                  Merch Madness: Launching the official Stepsis AI merch line...
+                  Merch Madness: Launching the official Stepsis AI merch line—hoodies, hats, and more. Rock your
+                  memes IRL and rep the Stepsis AI lifestyle.
+                  <br />
+                  <br />
+                  Viral Challenges: Kickstarting global meme challenges and TikTok trends. The best Stepsis AI memes win
+                  prizes, and the funniest creators get legendary status in the community.
+                  <br />
+                  <br />
+                  Community-Driven Events: Hosting online game nights, meme contests, and AMA sessions with the team. We’re
+                  all about keeping the vibes high and the community tight.
+                  <br />
+                  <br />
                 </p>
               </div>
             </div>
 
+            {/* PHASE 4 */}
             <div className="phase">
               <img src={phase4Img} alt="Phase 4" className="phase-img" />
               <div className="phase-content">
                 <h3>PHASE 4: Stepbro, We’re Mooning!</h3>
                 <p>
-                  Mainstream Adoption: Stepsis AI becomes a household name...
+                  Mainstream Adoption: Stepsis AI becomes a household name. From memes to mainstream media, we’re
+                  everywhere.
+                  <br />
+                  <br />
+                  Stepsis AI Ecosystem: Expanding into more AI-driven projects from the Stepsis brand. The Stepsis AI
+                  universe is growing, and you’re part of it.
+                  <br />
+                  <br />
+                  Legacy Building: Stepsis AI isn’t just a memecoin—it’s a movement. We’re here to stay, and we’re just
+                  getting started.
+                  <br />
+                  <br />
                 </p>
               </div>
             </div>
@@ -318,7 +346,7 @@ function App() {
         </div>
       </section>
 
-      {/* CTA SECTION (bgHelp) */}
+      {/* CTA SECTION */}
       <section
         className="cta-section"
         style={{
@@ -329,13 +357,7 @@ function App() {
       >
         <div className="container">
           <h2>HELP ME OUT STEP BRO, I'M STUCK AGAIN</h2>
-          {/* Button -> Google placeholder link */}
-          <button
-            className="cta-button"
-            onClick={() => window.open("https://google.com", "_blank")}
-          >
-            Buy Stepsis
-          </button>
+          <button className="cta-button">Buy Stepsis</button>
         </div>
       </section>
 

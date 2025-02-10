@@ -1,14 +1,18 @@
 /*
-  Stepsis AI - Updated
-  1) Roadmap: removed dashed line + bullet points
-  2) Buy Stepsis image: scaled 1.5 (50% larger)
+  Stepsis AI - Final Style
+  - Hero: 80% video (20% smaller than full width)
+  - Buy Stepsis => video instead of image (scaled bigger)
+  - No dashed line in Roadmap
+  - Custom cursors, marquee, 3D hover, etc.
 */
 
-/* If you have an imported font for headings, keep it. E.g.: */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
+/* If you import bold fonts:
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*/
 
 :root {
-  --marquee-duration: 40s; /* ticker speed, no hover effect now */
+  /* Ticker speed (no hover effect) */
+  --marquee-duration: 40s;
 }
 
 * {
@@ -21,21 +25,30 @@ html {
   scroll-behavior: smooth;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   background: #000;
   color: #fff;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
+  /* default lips cursor */
   cursor: url('./assets/cursor-lips.png'), auto;
 }
 
-/* Hover => tongue cursor on interactive items */
-button:hover, a:hover, .hero-image:hover, .marquee-item:hover,
-.contract-button:hover, .cta-button:hover, .phase:hover {
+/* On hover => tongue */
+button:hover,
+a:hover,
+.marquee-item:hover,
+.contract-button:hover,
+.cta-button:hover,
+.phase:hover,
+.hero-video:hover,
+.buy-stepsis-img:hover {
   cursor: url('./assets/cursor-tongue.png'), pointer !important;
 }
 
+/* Radial BG + subtle animation */
 body {
   background: radial-gradient(circle at 50% 50%, #1e1e1e, #000 70%);
   animation: animateBg 15s ease-in-out infinite alternate;
@@ -52,7 +65,7 @@ body {
   }
 }
 
-/* Container */
+/* Container layout */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -64,9 +77,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-inner {
@@ -154,7 +167,7 @@ body {
 
 .hero-headline {
   font-size: 3.2rem;
-  font-weight: 700; 
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1rem;
 }
@@ -189,11 +202,11 @@ body {
 
 .hero-button:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 4px 15px rgba(187,134,252, 0.4);
+  box-shadow: 0 4px 15px rgba(187, 134, 252, 0.4);
 }
 
-/* Basic 3D hover on hero image */
-.hero-image-wrapper.basic-3d-hover {
+/* Hero Video Wrapper with 3D hover */
+.hero-video-wrapper.basic-3d-hover {
   flex: 1;
   max-width: 400px;
   margin: 0 auto;
@@ -202,19 +215,23 @@ body {
   transition: transform 0.6s ease;
 }
 
-.hero-image-wrapper.basic-3d-hover:hover {
-  transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+.hero-video-wrapper.basic-3d-hover:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.1);
 }
 
-.hero-image {
-  width: 100%;
+/* HERO VIDEO (shifted to the left so it is never cut off) */
+.hero-video {
+  width: 150%;
   height: auto;
+  position: relative;
+  left: -15%;
   border-radius: 12px;
   background: transparent;
-  box-shadow: 0 10px 30px rgba(187,134,252, 0.15);
+  box-shadow: 0 10px 30px rgba(187, 134, 252, 0.15);
+  object-fit: cover;
 }
 
-/* MARQUEE SECTION (40s, no hover effect) */
+/* MARQUEE SECTION (40s, no hover slowdown) */
 .marquee-container {
   height: 80px;
   background: #161616;
@@ -279,7 +296,7 @@ body {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.8rem;
-  text-shadow: 0 0 8px rgba(187,134,252, 0.4);
+  text-shadow: 0 0 8px rgba(187, 134, 252, 0.4);
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -301,8 +318,8 @@ body {
 }
 
 .about-point {
-  background-color: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 1rem;
 }
@@ -336,10 +353,10 @@ body {
 
 .about-image img:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(187,134,252, 0.2);
+  box-shadow: 0 10px 20px rgba(187, 134, 252, 0.2);
 }
 
-/* BUY STEPSIS SECTION */
+/* BUY STEPSIS SECTION => now a video, ~scaled bigger if you want */
 .buy-stepsis-section {
   padding: 4rem 1rem;
   text-align: center;
@@ -366,7 +383,7 @@ body {
   font-weight: 700;
   margin-bottom: 1rem;
   font-size: 2.8rem;
-  text-shadow: 0 0 6px rgba(187,134,252, 0.4);
+  text-shadow: 0 0 6px rgba(187, 134, 252, 0.4);
   position: relative;
   z-index: 1;
 }
@@ -378,8 +395,8 @@ body {
   gap: 1.5rem;
   position: relative;
   z-index: 1;
-  padding: 2rem; /* Add padding for better spacing */
-  max-width: 600px; /* Limit container width */
+  padding: 2rem;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -387,25 +404,26 @@ body {
   background-color: #222;
   padding: 1rem 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
 }
 
+/* For the buyStepsis video, same .buy-stepsis-img class */
 .buy-stepsis-img {
-  width: 100%; /* Scale to container */
-  max-width: 720px; /* Constrain maximum width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure no distortion */
-  background: transparent;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
   border-radius: 12px;
+  background: transparent;
+  object-fit: contain;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .buy-stepsis-img:hover {
-  transform: scale(1.07); /* Slight hover effect */
-  box-shadow: 0 4px 15px rgba(187,134,252, 0.3);
+  transform: scale(1.07);
+  box-shadow: 0 4px 15px rgba(187, 134, 252, 0.3);
 }
 
 .contract-button {
@@ -415,7 +433,7 @@ body {
   border: none;
   border-radius: 12px;
   font-weight: 700;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-size: 1.1rem;
@@ -423,10 +441,10 @@ body {
 
 .contract-button:hover {
   transform: scale(1.08) rotateZ(2deg);
-  box-shadow: 0 6px 18px rgba(187,134,252, 0.3);
+  box-shadow: 0 6px 18px rgba(187, 134, 252, 0.3);
 }
 
-/* ROADMAP SECTION => no dashed line, no bullet points */
+/* ROADMAP => no dashed line, standard phases */
 .roadmap-section {
   padding: 4rem 1rem;
   background: linear-gradient(120deg, #0c0c0c 0%, #1a1a1a 100%);
@@ -439,7 +457,7 @@ body {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.8rem;
-  text-shadow: 0 0 6px rgba(187,134,252, 0.4);
+  text-shadow: 0 0 6px rgba(187, 134, 252, 0.4);
 }
 
 .roadmap-container {
@@ -458,22 +476,22 @@ body {
   padding: 2rem 1rem;
   border-radius: 12px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   position: relative;
-  margin-left: 0; /* no offset needed */
+  margin-left: 0;
 }
 
 .phase:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(187,134,252, 0.2);
+  box-shadow: 0 8px 25px rgba(187, 134, 252, 0.2);
 }
 
 .phase-img {
   width: 200px;
   height: auto;
-  background: transparent;
   border-radius: 12px;
   margin-right: 1rem;
+  background: transparent;
 }
 
 .phase-content {
@@ -498,7 +516,7 @@ body {
   text-align: center;
   background: #111;
   position: relative;
-  background-size: cover; /* in case you want to keep these if not inline in JS */
+  background-size: cover;
   background-position: center;
 }
 
@@ -507,7 +525,7 @@ body {
   font-weight: 700;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  text-shadow: 0 0 6px rgba(187,134,252, 0.4);
+  text-shadow: 0 0 6px rgba(187, 134, 252, 0.4);
 }
 
 .cta-button {
@@ -524,7 +542,7 @@ body {
 
 .cta-button:hover {
   transform: translateY(-3px) scale(1.08);
-  box-shadow: 0 8px 20px rgba(187,134,252, 0.3);
+  box-shadow: 0 8px 20px rgba(187, 134, 252, 0.3);
 }
 
 /* FOOTER */
