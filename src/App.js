@@ -47,7 +47,7 @@ function App() {
 
   // Copies the contract address to the user's clipboard.
   const copyContractAddress = () => {
-    const contractAddress = "ContractAddressHere"; // Replace with your actual contract address
+    const contractAddress = "G1SpkUJ99WfxVpVuGaUgX7Vf8pwnHDmVNHK8hgarpump"; // Replace with your actual contract address
     navigator.clipboard.writeText(contractAddress)
       .then(() => {
         alert("Contract address copied to clipboard!");
@@ -246,7 +246,7 @@ function App() {
             ></video>
             {/* Contract button: Click to copy the contract address */}
             <button className="contract-button" onClick={copyContractAddress}>
-              CONTRACT: ContractAddressHere
+              CONTRACT: G1SpkUJ99WfxVpVuGaUgX7Vf8pwnHDmVNHK8hgarpump
             </button>
           </div>
         </div>
