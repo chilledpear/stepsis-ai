@@ -47,7 +47,7 @@ function App() {
 
   // Copies the contract address to the user's clipboard.
   const copyContractAddress = () => {
-    const contractAddress = "0xYourContractAddressHere"; // Replace with your actual contract address
+    const contractAddress = "ContractAddressHere"; // Replace with your actual contract address
     navigator.clipboard.writeText(contractAddress)
       .then(() => {
         alert("Contract address copied to clipboard!");
@@ -125,7 +125,7 @@ function App() {
             {/* External link button for chatting */}
             <button
               className="hero-button"
-              onClick={() => openExternalLink("https://your-chat-link.com")}
+              onClick={() => openExternalLink("https://t.me/stepsissAi")}
             >
               Chat With Stepsis
             </button>
@@ -246,7 +246,7 @@ function App() {
             ></video>
             {/* Contract button: Click to copy the contract address */}
             <button className="contract-button" onClick={copyContractAddress}>
-              CONTRACT: 0xYourContractAddressHere
+              CONTRACT: ContractAddressHere
             </button>
           </div>
         </div>
