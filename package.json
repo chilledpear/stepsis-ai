@@ -1,7 +1,6 @@
 {
   "name": "stepsis",
   "version": "0.1.0",
-  "homepage": "https://chilledpear.github.io/stepsis-ai",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
