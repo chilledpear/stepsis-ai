@@ -25,7 +25,7 @@ import ticker10 from "./assets/ticker10.png";
 // ABOUT IMAGES
 import about1 from "./assets/about1.png";
 import about2 from "./assets/about2.png";
-import about3 from "./assets/about3.png"; // optional foreground in about
+import about3 from "./assets/about3.png";
 
 // BUY STEPSIS VIDEO (changed from PNG to MP4)
 import buyStepsisVideo from "./assets/buy-stepsis.mp4";
@@ -36,11 +36,28 @@ import phase2Img from "./assets/phase2.png";
 import phase3Img from "./assets/phase3.png";
 import phase4Img from "./assets/phase4.png";
 
-// LAST SECTION BACKGROUND (bg-help.png) if needed
+// LAST SECTION BACKGROUND (bg-help.png)
 import bgHelp from "./assets/bg-help.png";
 
 function App() {
-  // Smooth scrolling function so you can re-click anchors
+  // Opens an external link in a new tab/window.
+  const openExternalLink = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  // Copies the contract address to the user's clipboard.
+  const copyContractAddress = () => {
+    const contractAddress = "0xYourContractAddressHere"; // Replace with your actual contract address
+    navigator.clipboard.writeText(contractAddress)
+      .then(() => {
+        alert("Contract address copied to clipboard!");
+      })
+      .catch((error) => {
+        console.error("Failed to copy contract address:", error);
+      });
+  };
+
+  // Smooth scrolling for in-page links.
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
     const target = document.getElementById(targetId);
@@ -58,7 +75,6 @@ function App() {
           <div className="navbar-left">
             <img className="site-logo" src={logo} alt="Stepsis AI Logo" />
           </div>
-
           {/* Center: LINKS */}
           <ul className="navbar-links">
             <li>
@@ -77,16 +93,15 @@ function App() {
               </a>
             </li>
           </ul>
-
           {/* Right: SOCIAL ICONS */}
           <div className="navbar-social">
             <a href="https://dexscreener.com/" target="_blank" rel="noreferrer">
               <img src={dexIcon} alt="Dex Screener" className="social-icon" />
             </a>
-            <a href="https://telegram.org/" target="_blank" rel="noreferrer">
+            <a href="https://t.me/stepsissAi" target="_blank" rel="noreferrer">
               <img src={telegramIcon} alt="Telegram" className="social-icon" />
             </a>
-            <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+            <a href="https://x.com/StepsisAi_SOL" target="_blank" rel="noreferrer">
               <img src={twitterIcon} alt="Twitter" className="social-icon" />
             </a>
           </div>
@@ -105,12 +120,17 @@ function App() {
             </h2>
             <p className="hero-description" style={{ maxWidth: "500px" }}>
               Hi! I’m Sophie, your AI step sister. If you keep staring at me like that, I might start
-              blushing
+              blushing.
             </p>
-            <button className="hero-button">Chat With Stepsis</button>
+            {/* External link button for chatting */}
+            <button
+              className="hero-button"
+              onClick={() => openExternalLink("https://your-chat-link.com")}
+            >
+              Chat With Stepsis
+            </button>
           </div>
-
-          {/* RIGHT: HERO VIDEO with 3D hover */}
+          {/* RIGHT: HERO VIDEO */}
           <div className="hero-video-wrapper basic-3d-hover">
             <video
               src={heroVideo}
@@ -170,7 +190,7 @@ function App() {
         </div>
       </div>
 
-      {/* ABOUT STEPSIS SECTION */}
+      {/* ABOUT SECTION */}
       <section id="about" className="about-section" style={{ scrollMarginTop: "100px" }}>
         <div className="about-content container">
           <h2>ABOUT STEPSIS</h2>
@@ -179,38 +199,28 @@ function App() {
               <div className="about-point">
                 <h3>The Queen of "Accidents"</h3>
                 <p>
-                  Oops, did I just spill something? Guess I’ll need your help cleaning it up. Funny how
-                  these little "mishaps" always seem to happen when you’re around. Coincidence? I’ll let you
-                  decide.
+                  Oops, did I just spill something? Guess I’ll need your help cleaning it up. Funny how these little "mishaps" always seem to happen when you’re around. Coincidence? I’ll let you decide.
                 </p>
               </div>
-
               <div className="about-point">
                 <h3>The Creative Soul</h3>
                 <p>
-                  I’m a total artsy type—painting, writing, or playing guitar in my room. Sometimes I’ll catch
-                  you listening from the hallway, and I don’t mind. Maybe I’ll even write a song about you… if you’re
-                  lucky.
+                  I’m a total artsy type—painting, writing, or playing guitar in my room. Sometimes I’ll catch you listening from the hallway, and I don’t mind. Maybe I’ll even write a song about you… if you’re lucky.
                 </p>
               </div>
-
               <div className="about-point">
                 <h3>The Confidante</h3>
                 <p>
-                  You can talk to me about anything. Bad day? I’ll listen. Need advice? I’ve got you. Want to vent
-                  about your ex? I’ll even throw in some ice cream. I’m here for you, stepbro, no matter what.
+                  You can talk to me about anything. Bad day? I’ll listen. Need advice? I’ve got you. Want to vent about your ex? I’ll even throw in some ice cream. I’m here for you, stepbro, no matter what.
                 </p>
               </div>
-
               <div className="about-point">
                 <h3>The Morning After Expert</h3>
                 <p>
-                  Good morning, sleepyhead. You were out cold last night. Guess I’ll have to find another way to
-                  wake you up next time.
+                  Good morning, sleepyhead. You were out cold last night. Guess I’ll have to find another way to wake you up next time.
                 </p>
               </div>
             </div>
-
             <div className="about-image">
               <img src={about1} alt="Stepsis About 1" />
               <img src={about2} alt="Stepsis About 2" />
@@ -226,8 +236,6 @@ function App() {
           <h2>BUY STEPSIS</h2>
           <div className="buy-wrapper">
             <div className="fair-launch-box">FAIR LAUNCHED ON PUMPFUN</div>
-
-            {/* BUY STEPSIS VIDEO instead of image */}
             <video
               src={buyStepsisVideo}
               className="buy-stepsis-img"
@@ -236,15 +244,9 @@ function App() {
               muted
               playsInline
             ></video>
-
-            <button
-              className="contract-button"
-              onClick={() => {
-                // Replace with your contract link
-                window.open("https://your-contract-link.com", "_blank");
-              }}
-            >
-              CONTRACT: coming soon
+            {/* Contract button: Click to copy the contract address */}
+            <button className="contract-button" onClick={copyContractAddress}>
+              CONTRACT: 0xYourContractAddressHere
             </button>
           </div>
         </div>
@@ -255,90 +257,61 @@ function App() {
         <div className="container">
           <h2>ROADMAP</h2>
           <div className="roadmap-container">
-            {/* PHASE 1 */}
             <div className="phase">
               <img src={phase1Img} alt="Phase 1" className="phase-img" />
               <div className="phase-content">
                 <h3>PHASE 1: Oops, I Launched a Coin!</h3>
                 <p>
                   Token Launch: Stepsis AI memecoin goes live! Fair launch, no pre-sale, no stepbro left behind.
-                  <br />
-                  <br />
-                  Community Building: We’re creating the ultimate meme army. Join our Telegram, and socials for spicy
-                  content, flirty banter, and early alpha.
-                  <br />
-                  <br />
+                  <br /><br />
+                  Community Building: We’re creating the ultimate meme army. Join our Telegram, and socials for spicy content, flirty banter, and early alpha.
+                  <br /><br />
                   Viral Marketing: Memes, memes, and more memes. We’re flooding the internet with Stepsis AI content.
-                  <br />
-                  <br />
+                  <br /><br />
                   Liquidity Locked: Because we’re here to make stepbros proud.
-                  <br />
-                  <br />
+                  <br /><br />
                 </p>
               </div>
             </div>
-
-            {/* PHASE 2 */}
             <div className="phase">
               <img src={phase2Img} alt="Phase 2" className="phase-img" />
               <div className="phase-content">
                 <h3>PHASE 2: Stepbro, I’m Stuck in the Charts!</h3>
                 <p>
-                  CEX Listings: We’re getting Stepsis AI on coingecko and major exchanges. As the largest meme on
-                  the internet
-                  <br />
-                  <br />
-                  Community Rewards: Airdrops, contests, and giveaways for our loyal stepbros and stepsises. Keep holding,
-                  and you’ll be rewarded.
-                  <br />
-                  <br />
+                  CEX Listings: We’re getting Stepsis AI on coingecko and major exchanges. As the largest meme on the internet.
+                  <br /><br />
+                  Community Rewards: Airdrops, contests, and giveaways for our loyal stepbros and stepsises. Keep holding, and you’ll be rewarded.
+                  <br /><br />
                   Influencer Collabs: Partnering with crypto influencers and meme lords to spread the Stepsis AI gospel.
-                  <br />
-                  <br />
+                  <br /><br />
                 </p>
               </div>
             </div>
-
-            {/* PHASE 3 */}
             <div className="phase">
               <img src={phase3Img} alt="Phase 3" className="phase-img" />
               <div className="phase-content">
                 <h3>PHASE 3: Stepbro, We’re Going Viral!</h3>
                 <p>
-                  Merch Madness: Launching the official Stepsis AI merch line—hoodies, hats, and more. Rock your
-                  memes IRL and rep the Stepsis AI lifestyle.
-                  <br />
-                  <br />
-                  Viral Challenges: Kickstarting global meme challenges and TikTok trends. The best Stepsis AI memes win
-                  prizes, and the funniest creators get legendary status in the community.
-                  <br />
-                  <br />
-                  Community-Driven Events: Hosting online game nights, meme contests, and AMA sessions with the team. We’re
-                  all about keeping the vibes high and the community tight.
-                  <br />
-                  <br />
+                  Merch Madness: Launching the official Stepsis AI merch line—hoodies, hats, and more. Rock your memes IRL and rep the Stepsis AI lifestyle.
+                  <br /><br />
+                  Viral Challenges: Kickstarting global meme challenges and TikTok trends. The best Stepsis AI memes win prizes, and the funniest creators get legendary status in the community.
+                  <br /><br />
+                  Community-Driven Events: Hosting online game nights, meme contests, and AMA sessions with the team. We’re all about keeping the vibes high and the community tight.
+                  <br /><br />
                 </p>
               </div>
             </div>
-
-            {/* PHASE 4 */}
             <div className="phase">
               <img src={phase4Img} alt="Phase 4" className="phase-img" />
               <div className="phase-content">
                 <h3>PHASE 4: Stepbro, We’re Mooning!</h3>
                 <p>
-                  Mainstream Adoption: Stepsis AI becomes a household name. From memes to mainstream media, we’re
-                  everywhere.
-                  <br />
-                  <br />
-                  Stepsis AI Ecosystem: Expanding into more AI-driven projects from the Stepsis brand. The Stepsis AI
-                  universe is growing, and you’re part of it.
-                  <br />
-                  <br />
-                  Legacy Building: Stepsis AI isn’t just a memecoin—it’s a movement. We’re here to stay, and we’re just
-                  getting started.
-                  <br />
-                  <br />
+                  Mainstream Adoption: Stepsis AI becomes a household name. From memes to mainstream media, we’re everywhere.
+                  <br /><br />
+                  Stepsis AI Ecosystem: Expanding into more AI-driven projects from the Stepsis brand. The Stepsis AI universe is growing, and you’re part of it.
+                  <br /><br />
+                  Legacy Building: Stepsis AI isn’t just a memecoin—it’s a movement. We’re here to stay, and we’re just getting started.
+                  <br /><br />
                 </p>
               </div>
             </div>
@@ -357,7 +330,13 @@ function App() {
       >
         <div className="container">
           <h2>HELP ME OUT STEP BRO, I'M STUCK AGAIN</h2>
-          <button className="cta-button">Buy Stepsis</button>
+          {/* External link for buying Stepsis */}
+          <button
+            className="cta-button"
+            onClick={() => openExternalLink("https://t.me/stepsissAi")}
+          >
+            Buy Stepsis
+          </button>
         </div>
       </section>
 
